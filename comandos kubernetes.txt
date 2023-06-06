@@ -1,0 +1,17 @@
+comandos kubernetes
+-> pods
+kubectl get pods - get pods
+kubectl get pods --all-namespaces - pods de todos namespaces
+kubectl run [nome da pod] --image httpd - starta minha pod com a imagem do apache server.
+kubectl get pods -o wide - complementa com mais informações, como ip e etc..
+kubectl delete pod [nome da pod] - deleta  a pod
+kubectl delete --all pods - deleta todas as pods lembrando que sem ser a do sistema
+kubectl create -f [caminho do arquivo yaml] - cria uma pod a partir de um yaml file.
+kubectl apply -f [caminho do pod] - cria ou aplica alterações no pod
+
+-> replicaset
+kubectl get replicasets - lista replicasets
+kubectl create -f [caminho do replicaset] - cria o replicaset
+kubectl delete replicasets [nome do replicaset] - deleta o replicaset e as suas pods subsequentes.
+kubectl apply -f [caminho do replicaset] - cria ou aplica alterações no replicaset
+kubectl scale replicasets [nome do replicaset] --replicas=[numero de replicas] - escala a quantidade pods

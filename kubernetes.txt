@@ -1,0 +1,36 @@
+Kubernets
+
+.: Componentes
+-> Cloud controller manager - para cloud, posso ter alguns pedaçõs do kube em alguma cloud.
+-> Controller manager - Para controlar todos os recursos do kubernetes.
+-> etcd - banco de dados config do kubernetes.
+-> kube-proxy - para achar os cluster do kubernetes, todos eles tem um dns.
+-> Cluster - Node - Pod 
+  	Cada pod tem meus containers, um ou mais.
+-> kube-Scheduler - agendamento do kubernetes, distribuição de pods nos nodes.
+-> kubelet - garantir que os containers estejam executados nos pods. é um fiscal, pod specs. só cuida dos containers
+dentro dos PODS.
+-> cri - kubernetes nao executa container, quem executa é o container runtime interface, o kubelet manda pro cri e ele executa,
+tem que tá no padrão OCI.
+-> Kubernetes suporta ex: docker, containerD, cri-o, ex: kubernetes não gerencia apenas docker.
+
+.: YAML
+! NÃO É UMA LINGUAGEM DE MARCAÇÃO.
+-> *Y*AML *A*in't *M*arkup *L*anguage.
+-> YAML NÃO USA TAB, USA ESPAÇO
+
+.: Minikube -
+minikube start - inicia o minikube
+
+.: Pods
+-> Dentro do pod tem um ip.
+-> Também é possivel criar uma pod a partir de um arquivo yaml.
+
+.: ReplicaSet
+-> Controla a quantidade de pods.
+-> Ele controla tambem os pods, se deletar um pod ele recria.
+
+.: Deployment
+-> Recurso mais importante do k8s.
+-> É o responsavel pelo deploy da sua aplicação.
+
